@@ -1,0 +1,24 @@
+# write program to print n number of strong number
+
+
+def fact(x):                       #method for strong number
+    fa, i = 1, 1
+    for i in range(1, x+1):
+         fa = fa * i
+    x = fa
+    return x
+
+
+limit = int(input("range of number required:"))       #input number
+y = 1
+sum = 0
+while y <= limit:              #taking the elements from 1 to range n
+    list1 = []
+    for i1 in str(y):          #making list one number
+        list1.append(int(i1))
+        for i2 in list1:        # summing the numbers from the list
+           sum = sum + fact(i2)
+           if sum == y:          # comparing the numbers from the list
+                print(y)
+        sum = 0
+    y += 1
