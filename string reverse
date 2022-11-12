@@ -1,0 +1,26 @@
+# write a program to reverse a string .
+# nikhil
+
+def giving_list(word):
+    list = []                                # converting the value to list ##
+    for i1 in word:
+        list.append(i1)
+    return list
+
+def reverse_string(list):                   #  reversing the list
+    list2 = []
+    n = len(list)  # reversing the number
+    i = n - 1
+    while i >= 0:
+        list2.append(list[i])
+        i -= 1
+    return list2
+
+
+word = input("enter the word:")               # input string
+x = giving_list(word)
+y = reverse_string(x)
+str1 = ""
+for i in y:                                   # converting list to string
+    str1 = str1 + str(i)
+print(str1)
