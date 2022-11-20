@@ -1,0 +1,4 @@
+n = int(input("enter the range:"))
+mylist = [0, 1]
+[mylist.append(mylist[-2]+mylist[-1]) for n in range(n)]
+print(mylist)
